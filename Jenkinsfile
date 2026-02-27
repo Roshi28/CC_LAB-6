@@ -31,7 +31,7 @@ pipeline {
                   nginx
         
                 # Add a short sleep to let NGINX start up
-                sleep 5
+                sleep 10
                 
                 docker cp ./nginx/default.conf nginx-lb:/etc/nginx/conf.d/default.conf
                 docker exec nginx-lb nginx -s reload
